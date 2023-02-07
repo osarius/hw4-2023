@@ -122,10 +122,13 @@ li:hover{
   row-gap: 15px;
 }
 
-.container:first-child{
-  column-span: all;
+.container div:first-child{
+  grid-column: 1/-1;
   background-image: url("../images/header.jpg");
-
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .about{
   grid-column: 2/3;
@@ -147,36 +150,38 @@ li:hover{
   grid-row-end: 6;
 }
 .about-image{
-  column-span: all;
+  grid-column: 1/-1;
   max-height: 600px;
   overflow:hidden;
   grid-row: 2/3;
 }
 .method-image{
-  column-span: all;
+  grid-column: 1/-1;
   max-height: 600px;
   overflow:hidden;
   grid-row: 3/4;
 }
 .clients-image{
-  column-span: all;
+  grid-column: 1/-1;
   max-height: 600px;
   overflow:hidden;
   grid-row: 4/5;
 }
 .contact-image{
-  column-span: all;
+  grid-column: 1/-1;
   max-height: 600px;
   overflow:hidden;
   grid-row: 5/6;
  }
 .text-block{
   text-align: center;
+  margin:auto;
 }
 
 @media screen and (min-width: 800px) {
   nav{
     padding: 30px 0px 30px 0px;
+    text-align: right;
   }
   .container{
     display:grid;
@@ -192,6 +197,7 @@ li:hover{
   }
   .text-block{
     max-height: 250px;
+    overflow:visible;
   }
 }
 
@@ -244,4 +250,5 @@ first div in the grid  and place it in the grid. */
 
 
  /* Step 13:Write the selector/rule property to update the .text-block class */
+
 
